@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div class="keyboard">
+    <div class="consonants">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="3">OBSTRUENT</th>
+                    <th colspan="4">SONORANT</th>
+                    <th colspan="3" rowspan="2"><button type="button" class="vowel" value="Vowel">VOWEL</button></th>
+                </tr>
+                <tr>
+                    <th>STOP</th>
+                    <th>AFFRICATE</th>
+                    <th>FRICATIVE</th>
+                    <th>NASAL</th>
+                    <th>LIQUID lateral</th>
+                    <th>LIQUID rhotic</th>
+                    <th>GLIDE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="moa" type="number" min="0" max="5" step="0.1" value="5.0"></td>
+                    <td><input class="moa" type="number" min="0" max="5" step="0.1" value="4.5"></td>
+                    <td><input class="moa" type="number" min="0" max="5" step="0.1" value="4.0"></td>
+                    <td><input class="moa" type="number" min="0" max="5" step="0.1" value="3.0"></td>
+                    <td><input class="moa" type="number" min="0" max="5" step="0.1" value="2.5"></td>
+                    <td><input class="moa" type="number" min="0" max="5" step="0.1" value="2.0"></td>
+                    <td><input class="moa" type="number" min="0" max="5" step="0.1" value="1.0"></td>
+                    <td class="align-left" colspan="3"><input disabled="disabled" type="number" min="0" max="5" step="0.1" value="0"></td>
+                </tr>
+                <tr>
+                    <td><button type="button" value="Voiceless bilabial plosive">p</button> <button type=
+                    "button" value="Voiced bilabial plosive">b</button></td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><button type="button" class="empty" disabled="true"></button>
+                    <button type="button" value="Voiced bilabial nasal">m</button></td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><button type="button" class="empty" disabled="true"></button>
+                    <button type="button" class="labiovelar" value="Voiced labial-velar approximant">w</button></td>
+                    <td><input class="poa" id="bilabialNAD" type="number" min="0" max="5" step="0.1" value="1.0"></td>
+                    <th>bilabial</th>
+                    <th colspan="1" rowspan="2">LABIAL</th>
+                </tr>
+                <tr>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><button type="button" value="Voiceless labiodental fricative">f</button> <button type=
+                    "button" value="Voiced labiodental fricative">v</button></td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><input class="poa" type="number" min="0" max="5" step="0.1" value="1.5"></td>
+                    <th>labio-dental</th>
+                </tr>
+                <tr>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><button type="button" value="Voiceless dental fricative">θ</button>
+                    <button type="button" value="Voiced dental fricative">ð</button></td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><input class="poa" type="number" min="0" max="5" step="0.1" value="2.0"></td>
+                    <th>inter-dental</th>
+                    <th colspan="1" rowspan="3">CORONAL</th>
+                </tr>
+                <tr>
+
+                    <td><button type="button" value="Voiceless alveolar plosive">t</button> <button type="button"
+                    value="Voiced alveolar plosive">d</button></td>
+                    <td class="empty">&nbsp;</td>
+                    <td><button type="button" value="Voiceless alveolar fricative">s</button>
+                    <button type="button" value="Voiced alveolar fricative">z</button></td>
+                    <td><button type="button" class="empty" disabled="true"></button>
+                    <button type="button" value="Voiced alveolar nasal">n</button></td>
+                    <td><button type="button" class="empty" disabled="true"></button>
+                    <button type="button" value="Voiced alveolar lateral approximant">l</button></td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><input class="poa" type="number" min="0" max="5" step="0.1" value="2.3"></td>
+                    <th>alveolar</th>
+                </tr>
+                <tr>
+                    <td class="empty">&nbsp;</td>
+                    <td><button type="button" value="Voiceless postalveolar affricate">ʧ</button>
+                    <button type="button" value="Voiced postalveolar affricate">ʤ</button></td>
+                    <td><button type="button" value="Voiceless postalveolar fricative">ʃ</button>
+                    <button type="button" value="Voiced postalveolar fricative">ʒ</button></td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><button type="button" class="empty" disabled="true"></button>
+                    <button type="button" value="Voiced postalveolar approximant">ɹ</button></td>
+                    <td class="empty">&nbsp;</td>
+                    <td><input class="poa" type="number" min="0" max="5" step="0.1" value="2.6"></td>
+                    <th>post-alveolar</th>
+                </tr>
+                <tr>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><button type="button" class="empty" disabled="true"></button>
+                    <button type="button" value="Voiced palatal approximant">j</button></td>
+                    <td><input class="poa" type="number" min="0" max="5" step="0.1" value="3.0"></td>
+                    <th>palatal</th>
+                    <th colspan="1" rowspan="2">DORSAL</th>
+                </tr>
+                <tr>
+                    <td><button type="button" value="Voiceless velar plosive">k</button> <button type="button"
+                    value="Voiced velar plosive">ɡ</button></td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty"></td>
+                    <td><button type="button" class="empty" disabled="true"></button>
+                    <button type="button" value="Voiced velar nasal">ŋ</button></td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><button type="button" class="empty" disabled="true"></button>
+                    <button type="button" class="labiovelar" value="Voiced labial-velar approximant">w</button></td>
+                    <td><input class="poa" id="velarNAD" type="number" min="0" max="5" step="0.1" value="3.5"></td>
+                    <th>velar</th>
+                </tr>
+                <tr>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><input class="poa" type="number" min="0" max="5" step="0.1" value="4.0"></td>
+                    <th class="empty">&nbsp;</th>
+                    <th>RADICAL</th>
+                </tr>
+                <tr>
+                    <td><button type="button" value="Voiceless glottal stop">ʔ</button>
+                    <button type="button" class="empty" disabled="true"></button></td>
+                    <td class="empty">&nbsp;</td>
+                    <td><button type="button" value="Voiceless glottal fricative">h</button>
+                    <button type="button" class="empty" disabled="true"></button></td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><input class="poa" type="number" min="0" max="5" step="0.1" value="5.0"></td>
+                    <th class="empty">&nbsp;</th>
+                    <th>GLOTTAL</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

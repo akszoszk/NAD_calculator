@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Net Auditory Distance calculator" name="description">
+    <meta content="phonetics,NAD,calculator,Polish,IPA,English" name="keywords">
+    <title>Cluster preferability calculator</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="subhead">
+            <div class="container-fluid">
+                <h1>Cluster preferability calculator</h1>
+            </div>
+        </header>
+
+        <div class="container-fluid">
+            <p>This tool automatically calculates NAD for two- and three-consonant clusters in word initial, medial and final position.</p>
+            <p>To calculate NAD, simply use the keyboard below to input consonant clusters in the box, writing <strong>one cluster per line</strong>. Use the symbol <strong>V</strong> to indicate the positions of vowels relative to the cluster, e.g.
+            <br/><span class="text-info">klV</span><span class="muted"> – word initial cluster /kl/ followed by a vowel</span>
+            <br/><span class="text-info">Vst</span><span class="muted"> – word final cluster /st/ preceded by a vowel</span>
+        	<br/><span class="text-info">VndV</span><span class="muted"> – medial cluster /nd/ surrounded by vowels</span>
+            </p>
+            <hr>
+
+            <div class="row-fluid">
+                <div class="span3">
+                    <h4>Input:</h4>
+                    <form id="form">     
+                        <textarea autofocus="true" class="insertHere" id="clusters" rows="7" cols="25" placeholder="e.g. klV" spellcheck='false'></textarea>
+                        <button type="button" class="btn" id="remove"><img class="icon-remove"/> Clear</button> 
+                        <button type="button" class="btn" id="target" type="submit"><img class="icon-ok"/> Calculate</button>
+                    </form>
+                </div>
+
+                <div class="span9">
+                	<h4>Language: 
+                        	<select id="db">
+ 								<option value="eng" selected="true">English</option>
+ 								<option value="pl">Polish</option>
+ 								<option value="custom">User-defined</option>
+ 							</select>
+ 						<label class="checkbox"><input type="checkbox" checked="checked" id="include-sonority"> Include sonority when calculating NAD</label>
+ 					</h4>
+                    <div id="keyboard-placeholder">
+
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <h4>Results:</h4>
+
+            <div id="result">
+            	<table class="table">
+            		<thead>
+            			<tr>
+            				<td>IPA transcription</td>
+            				<td>CV structure</td>
+            				<td>NAD(VC)</td>
+            				<td>NAD(C1C2)</td>
+            				<td>NAD(C2C3)</td>
+            				<td>NAD(CV)</td>
+            				<td>Preferred cluster?</td>
+            			</tr>
+            		</thead>
+            		<tbody>
+            		</tbody>
+            	</table>
+            	<button type="button" class="btn" id="clear-table"><img class="icon-remove"/> Clear table</button>
+            	<a class="btn" id="export" href="#"><img class="icon-file"/> Export to CSV</a> 
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container-fluid">
+            <p>Written by <a href="http://wa.amu.edu.pl/wa/aperlinski_grzegorz"
+            target="_blank">Grzegorz Aperliński</a> (<a href="mailto:gaperlinski@wa.amu.edu.pl">gaperlinski@wa.amu.edu.pl</a>), based on original work by <a href="http://wa.amu.edu.pl/wa/Krynicki_Grzegorz"
+            target="_blank">Grzegorz Krynicki</a>, later supplemented by <a href="http://wa.amu.edu.pl/wa/Pietrala_Dawid"
+            target="_blank">Dawid Pietrala</a>.</p>
+        </div>
+     <script src="js/jquery.js" type="text/javascript"></script>
+     <script src="js/rangy.js" type="text/javascript"></script>
+     <script src="js/table2csv.js" type="text/javascript"></script>
+     <script src="js/export.js" type="text/javascript"></script>
+     <script src="js/bootstrap.min.js" type="text/javascript"></script>
+     <script src="js/keyboard.js" type="text/javascript"></script>
+     <script src="js/calculator.js" type="text/javascript"></script>
+     <script src="js/storage.js" type="text/javascript"></script>
+    </div>
+</body>
+</html>

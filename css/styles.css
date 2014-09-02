@@ -1,0 +1,137 @@
+.subhead {
+    padding-top: 10px;
+    margin-bottom: 20px;
+    background-color: #59011A;
+    color: #FFF;
+    -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    box-shadow: 7 1px 10px rgba(0,0,0,0.1);
+}
+
+.text-info {
+    font-family: "Charis SIL", "Doulos SIL", "Times New Roman";
+}
+
+.small {
+	font-size: 0.9em;
+}
+
+hr {
+    color: #CCC;
+    background-color: #CCC;
+    border: 1px solid #CCC;
+}
+
+.insertHere {
+    font-family: "Charis SIL", "Doulos SIL", "Times New Roman";
+    font-size: 1.5em;
+    line-height: 1.2;
+    width: 100%;
+    resize: none;
+    min-height: 202px;
+}
+
+select#db {
+	margin: -10px 0 -10px;
+	width: 120px;
+}
+
+.keyboard {
+    border: 1px solid;
+    padding: 5px;
+    background: none repeat scroll 0 0 #F3F3F3;
+    border-color: #CCC;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.15);
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.keyboard button {
+    margin: 1px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.keyboard button:not(.vowel) {
+    font-family: "Charis SIL", "Doulos SIL", "Times New Roman";
+    font-size: 16px;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1em;
+}
+
+.keyboard button.vowel {
+	font-weight: inherit;
+	font-size: inherit;
+}
+.keyboard button:not(.empty):hover {
+    background-color: rgba(160,232,255,0.5);
+}
+
+.consonants table {
+    border-collapse: collapse;
+}
+
+.consonants table td {
+    border: 1px solid #CCC;
+	min-width: 60px;
+	text-align: center;
+}
+
+.consonants table td.align-left {
+	text-align: left;
+}
+
+.consonants table td.empty {
+	background-color: #e3e3e3;
+}
+
+.consonants table th {
+    border: 1px solid #CCC;
+	min-width: 60px;
+}
+
+.consonants table th {
+	font-size: 0.8em;
+	padding: 2px;		
+}
+
+button.empty:hover {
+	cursor: default;
+}
+
+.consonants table tbody th {
+	text-align: left;
+}
+
+table thead td {
+	font-weight: bold;
+}
+
+.consonants table input {
+	width: 50px;
+	text-align: center;
+	margin: 0;
+}
+
+.consonants table input[disabled] {
+	cursor: inherit;
+}
+
+#result table tbody tr td:first-child {
+	font-family: "Charis SIL", "Doulos SIL", "Times New Roman";
+}
+
+label.checkbox {
+	display: inline-block;
+	margin-left: 50px;
+}
+
+.highlight {
+    background-color: rgba(160,232,255,0.5);
+}
+
+#custom {
+	margin: 0;
+}

@@ -368,13 +368,14 @@ $('body').on('change', 'input[type=number]', function() {
 	$.proxy(modifyNAD, $(this))();
 });
 
-// var customNAD = 0;
-// $('textarea').focus(function() {
-// 	if (customNAD == 0) {
-// 		$.proxy(modifyNAD, $('input[type=number]'))();
-// 		customNAD++;
-// 	}
-// 	else {
-// 		return false;
-// 	}
-// });
+
+//update custom db segments with remembered input values 
+var customNADloaded = 0;
+$('#clusters').change(function(){
+    if ($('#db').val() === "custom" && customNADloaded === 0) {
+    	$('input[type=number]').each(function(){
+			$.proxy(modifyNAD, $(this))();
+    	});
+    	customNADloaded = 1;
+    }
+});

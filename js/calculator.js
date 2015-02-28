@@ -48,7 +48,7 @@ function tempSymbols(cluster) {
    	ʦ̪: "C", 
    	ʣ̪: "Q"
 	};
-	cluster = cluster.replace(/t͡ʂ|d͡ʐ|j̃|w̃|t̪|d̪/gi, function(matched){
+	cluster = cluster.replace(/t͡ʂ|d͡ʐ|j̃|w̃|t̪|d̪|ʦ̪|ʣ̪/gi, function(matched){
   	return mapObj[matched];
 	});
 	return cluster;
@@ -328,8 +328,7 @@ function modifyNAD() {
 					//update moa NAD value of matched token
 					var token = $(this).html();
 					var token = tempSymbols(token);
-					segments.segments[token].moa = newNAD;
-				}
+					segments.segments[token].moa = newNAD;				}
 			});
 		});
 	}
@@ -341,7 +340,7 @@ function modifyNAD() {
     	$(this).parent().parent().parent().children('tr').each(function () {
     		//iterate through each button in row
     		$(this).find('button:not(.empty,.labiovelar)').each(function (index, element) {
-    			//if a button if in the same column as the column clicked, print value of button
+    			//if a button is in the same column as the column clicked, print value of button
 				if ($(this).parent().parent().parent().children().index($(this).parent().parent()) === thisIndex) {
 					//update poa NAD value of matched token
 					var token = $(this).html();
@@ -350,10 +349,12 @@ function modifyNAD() {
 						segments.segments[token].poa = newNAD;
 						var newLabialVelarNAD = parseFloat($('#bilabialNAD').val(), 10) + parseFloat($('#velarNAD').val(), 10);
 						segments.segments["w"].poa = newLabialVelarNAD/2;
-						segments.segments["ʍ"].poa = newLabialVelarNAD/2;
 						if ($('#db').val() === "pl") {
 							segments.segments["W"].poa = newLabialVelarNAD/2;
-						}						
+						}
+						else if ($('#db').val() === "custom") {
+							segments.segments["ʍ"].poa = newLabialVelarNAD/2;
+						}					
 					}
 					else {
 					segments.segments[token].poa = newNAD;
@@ -363,17 +364,17 @@ function modifyNAD() {
 		});
   	}
 }
-$('body').on('blur', 'input[type=number]', function() {
-	$.proxy(modifyNAD, $('input[type=number]'))();
+$('body').on('change', 'input[type=number]', function() {
+	$.proxy(modifyNAD, $(this))();
 });
 
-var customNAD = 0;
-$('textarea').focus(function() {
-	if (customNAD == 0) {
-		$.proxy(modifyNAD, $('input[type=number]'))();
-		customNAD++;
-	}
-	else {
-		return false;
-	}
-});
+// var customNAD = 0;
+// $('textarea').focus(function() {
+// 	if (customNAD == 0) {
+// 		$.proxy(modifyNAD, $('input[type=number]'))();
+// 		customNAD++;
+// 	}
+// 	else {
+// 		return false;
+// 	}
+// });

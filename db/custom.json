@@ -161,6 +161,13 @@
             "son": 1,
             "isVowel": false
         },
+        "ʍ": {
+            "poa": 0,
+            "moa": 0,
+            "lx": 1,
+            "son": 1,
+            "isVowel": false
+        },
         "l": {
             "poa": 0,
             "moa": 0,
@@ -230,7 +237,6 @@
             "lx": 1,
             "son": 0,
             "isVowel": false
-        },
         },
         "C": {
             "poa": 0,

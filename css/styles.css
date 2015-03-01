@@ -143,3 +143,28 @@ label.checkbox {
     height: 60px;
     margin-bottom: 10px;
 }
+
+#clusters {
+    box-sizing: border-box;
+}
+#clusters[readonly] {
+    background-color: #fff;
+    color: #555;
+    -webkit-text-fill-color: #555;
+    cursor: text;
+    min-height: 30px;
+    height: 2em;
+}
+
+#input-keyboard.mobile {
+    margin: 0;
+}
+
+#input-keyboard.mobile #keyboard-placeholder {   
+    overflow: scroll;
+    text-align: center;
+}
+
+#input-keyboard.mobile #keyboard-placeholder td {
+    min-width: 6em;
+}

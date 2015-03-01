@@ -1,42 +1,8 @@
 ﻿var $textBox;
 
-$(document).ready(function() {
-    $textBox = $("#clusters");
-    
-    /*function saveSelection(){
-        $textBox.data("lastSelection", $textBox.getSelection());
-    }
-    
-    $textBox.focusout(saveSelection);
-    
-    $textBox.bind("beforedeactivate", function() {
-        saveSelection();
-        $textBox.unbind("focusout");
-    });*/
-});
-/* doesn't work on FF
-function insertText(text) {
-    var selection = $textBox.data("lastSelection");
-    $textBox.blur(function (event) {
-    setTimeout(function () { $textBox.focus(); }, 20);
-	});
-    $textBox.setSelection(selection.start, selection.end);
-    $textBox.replaceSelectedText(text);
-}
-
-//insert content of button in keyboard when pressed
-$('#keyboard-placeholder').on('click', 'button', function() {
-	if ($(this).html() === "VOWEL") {
-		insertText("V");
-	}
-	else {
-		insertText($(this).html());
-	}
-});
-*/
-
 //works on all browsers
 $(document).ready(function() {
+    $textBox = $("#clusters");
     $('#keyboard-placeholder').on('click', 'button', function() {
     	if ($(this).html() === "VOWEL") {
     		$textBox.insertAtCaret("V");

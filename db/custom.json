@@ -224,6 +224,20 @@
             "son": 1,
             "isVowel": false
         },
+        "x": {
+            "poa": 0,
+            "moa": 0,
+            "lx": 0,
+            "son": 0,
+            "isVowel": false
+        },
+        "ɣ": {
+            "poa": 0,
+            "moa": 0,
+            "lx": 1,
+            "son": 0,
+            "isVowel": false
+        }        ,
         "T": {
             "poa": 0,
             "moa": 0,

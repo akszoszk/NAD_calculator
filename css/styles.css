@@ -168,3 +168,13 @@ label.checkbox {
 #input-keyboard.mobile #keyboard-placeholder td {
     min-width: 6em;
 }
+
+.wrapper {
+    margin-bottom: 100px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

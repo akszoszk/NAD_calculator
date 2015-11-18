@@ -32,6 +32,7 @@ $('#db').change(function() {
             segments = data;
         }
     });
+    console.log(segments);
     return segments;
 })(); 
 });
@@ -46,9 +47,10 @@ function tempSymbols(cluster) {
    	t̪:"T",
    	d̪:"D",
    	ʦ̪: "C", 
-   	ʣ̪: "Q"
+   	ʣ̪: "Q",
+   	pf : "P",
 	};
-	cluster = cluster.replace(/t͡ʂ|d͡ʐ|j̃|w̃|t̪|d̪|ʦ̪|ʣ̪/gi, function(matched){
+	cluster = cluster.replace(/t͡ʂ|d͡ʐ|j̃|w̃|t̪|d̪|ʦ̪|ʣ̪|pf/gi, function(matched){
   	return mapObj[matched];
 	});
 	return cluster;

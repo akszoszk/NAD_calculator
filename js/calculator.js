@@ -184,6 +184,7 @@ function calculateNAD(cluster) {
 	case "CCV":
 		nadC1C2 = calcnadCC(segments.segments[cluster[0]],segments.segments[cluster[1]]);
 		nadCV = calcnadCV(segments.segments[cluster[1]],segments.segments[cluster[2]]);
+		nadProduct = (Math.abs(nadC1C2 - nadCV)).toFixed(2);
 		if (nadC1C2 >= nadCV) {
 			preference = "Yes";
 		}
@@ -195,6 +196,7 @@ function calculateNAD(cluster) {
 	case "VCC":
 		nadC1C2 = calcnadCC(segments.segments[cluster[1]],segments.segments[cluster[2]]);
 		nadVC = calcnadCV(segments.segments[cluster[0]],segments.segments[cluster[1]]);
+		nadProduct = (Math.abs(nadVC - nadC1C2)).toFixed(2);
 		if (nadC1C2 >= nadVC) {
 			preference = "Yes";
 		}
@@ -206,6 +208,7 @@ function calculateNAD(cluster) {
 		nadVC = calcnadCV(segments.segments[cluster[0]],segments.segments[cluster[1]]);
 		nadCV = calcnadCV(segments.segments[cluster[2]],segments.segments[cluster[3]]);
 		nadC1C2 = calcnadCC(segments.segments[cluster[1]],segments.segments[cluster[2]]);
+		nadProduct = ((Math.abs(nadVC - nadC1C2) + Math.abs(nadC1C2 - nadCV)) / 2).toFixed(2);
 		if (nadVC >= nadC1C2 && nadC1C2 < nadCV && nadC1C2 > 0) {
 			preference = "Yes";
 		}
@@ -217,7 +220,7 @@ function calculateNAD(cluster) {
 		nadC1C2 = calcnadCC(segments.segments[cluster[0]],segments.segments[cluster[1]]);
 		nadC2C3 = calcnadCC(segments.segments[cluster[1]],segments.segments[cluster[2]]);
 		nadCV = calcnadCV(segments.segments[cluster[2]],segments.segments[cluster[3]]);
-		nadProduct = ((abs(nadC1C2 - nadC2C3) + abs(nadC2C3 - nadCV)) / 2).toFixed(1);
+		nadProduct = ((Math.abs(nadC1C2 - nadC2C3) + Math.abs(nadC2C3 - nadCV)) / 2).toFixed(2);
 		if (nadC1C2 < nadC2C3 && nadC2C3 >= nadCV) {
 			preference = "Yes";
 		}
@@ -229,7 +232,8 @@ function calculateNAD(cluster) {
 	case "VCCC":
 		nadC1C2 = calcnadCC(segments.segments[cluster[1]],segments.segments[cluster[2]]);
 		nadC2C3 = calcnadCC(segments.segments[cluster[2]],segments.segments[cluster[3]]);
-		nadVC = calcnadCV(segments.segments[cluster[0]],segments.segments[cluster[1]]);
+		nadVC = calcnadCV(segments.segments[cluster[0]],segments.segments[cluster[1]]);;
+		nadProduct = ((Math.abs(nadC1C2 - nadC2C3) + Math.abs(nadC1C2 - nadVC)) / 2).toFixed(2);
 		if (nadVC <= nadC1C2 && nadC1C2 > nadC2C3) {
 			preference = "Yes";
 		}

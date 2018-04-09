@@ -184,63 +184,63 @@ function calculateNAD(cluster) {
 	case "CCV":
 		nadC1C2 = calcnadCC(segments.segments[cluster[0]],segments.segments[cluster[1]]);
 		nadCV = calcnadCV(segments.segments[cluster[1]],segments.segments[cluster[2]]);
-		nadProduct = (Math.abs(nadC1C2 - nadCV)).toFixed(2);
+		nadProduct = nadC1C2 - nadCV;
 		if (nadC1C2 >= nadCV) {
 			preference = "Yes";
 		}
 		else {
 			preference = "No";
 		}
-		result = "<td>-</td><td>"+nadC1C2.toFixed(1)+"</td><td>-</td><td>"+nadCV.toFixed(1)+"</td><td>"+nadProduct+"</td><td class='nad'>"+preference+"</td>"
+		result = "<td>-</td><td>"+nadC1C2.toFixed(1)+"</td><td>-</td><td>"+nadCV.toFixed(1)+"</td><td>"+nadProduct.toFixed(2)+"</td><td class='nad'>"+preference+"</td>"
 		return result;
 	case "VCC":
 		nadC1C2 = calcnadCC(segments.segments[cluster[1]],segments.segments[cluster[2]]);
 		nadVC = calcnadCV(segments.segments[cluster[0]],segments.segments[cluster[1]]);
-		nadProduct = (Math.abs(nadVC - nadC1C2)).toFixed(2);
+		nadProduct = nadC1C2 - nadVC;
 		if (nadC1C2 >= nadVC) {
 			preference = "Yes";
 		}
 		else {
 			preference = "No";
 		}
-		return "<td>"+nadVC.toFixed(1)+"</td><td>"+nadC1C2.toFixed(1)+"</td><td>-</td><td>-</td><td>"+nadProduct+"</td><td class='nad'>"+preference+"</td>";
+		return "<td>"+nadVC.toFixed(1)+"</td><td>"+nadC1C2.toFixed(1)+"</td><td>-</td><td>-</td><td>"+nadProduct.toFixed(2)+"</td><td class='nad'>"+preference+"</td>";
 	case "VCCV":
 		nadVC = calcnadCV(segments.segments[cluster[0]],segments.segments[cluster[1]]);
 		nadCV = calcnadCV(segments.segments[cluster[2]],segments.segments[cluster[3]]);
 		nadC1C2 = calcnadCC(segments.segments[cluster[1]],segments.segments[cluster[2]]);
-		nadProduct = ((Math.abs(nadVC - nadC1C2) + Math.abs(nadC1C2 - nadCV)) / 2).toFixed(2);
+		nadProduct = ((nadVC - nadC1C2) + (nadCV - nadC1C2)) / 2;
 		if (nadVC >= nadC1C2 && nadC1C2 < nadCV && nadC1C2 > 0) {
 			preference = "Yes";
 		}
 		else {
 			preference = "No";
 		}
-		return "<td>"+nadVC.toFixed(1)+"</td><td>"+nadC1C2.toFixed(1)+"</td><td>-</td><td>"+nadCV.toFixed(1)+"</td><td>"+nadProduct+"</td><td class='nad'>"+preference+"</td>";
+		return "<td>"+nadVC.toFixed(1)+"</td><td>"+nadC1C2.toFixed(1)+"</td><td>-</td><td>"+nadCV.toFixed(1)+"</td><td>"+nadProduct.toFixed(2)+"</td><td class='nad'>"+preference+"</td>";
 	case "CCCV":
 		nadC1C2 = calcnadCC(segments.segments[cluster[0]],segments.segments[cluster[1]]);
 		nadC2C3 = calcnadCC(segments.segments[cluster[1]],segments.segments[cluster[2]]);
 		nadCV = calcnadCV(segments.segments[cluster[2]],segments.segments[cluster[3]]);
-		nadProduct = ((Math.abs(nadC1C2 - nadC2C3) + Math.abs(nadC2C3 - nadCV)) / 2).toFixed(2);
+		nadProduct = ((nadC2C3 - nadC1C2) + (nadC2C3 - nadCV)) / 2;
 		if (nadC1C2 < nadC2C3 && nadC2C3 >= nadCV) {
 			preference = "Yes";
 		}
 		else {
 			preference = "No";
 		}
-		result = "<td>-</td><td>"+nadC1C2.toFixed(1)+"</td><td>"+nadC2C3.toFixed(1)+"</td><td>"+nadCV.toFixed(1)+"</td><td>"+nadProduct+"</td><td class='nad'>"+preference+"</td>"
+		result = "<td>-</td><td>"+nadC1C2.toFixed(1)+"</td><td>"+nadC2C3.toFixed(1)+"</td><td>"+nadCV.toFixed(1)+"</td><td>"+nadProduct.toFixed(2)+"</td><td class='nad'>"+preference+"</td>"
 		return result;
 	case "VCCC":
 		nadC1C2 = calcnadCC(segments.segments[cluster[1]],segments.segments[cluster[2]]);
 		nadC2C3 = calcnadCC(segments.segments[cluster[2]],segments.segments[cluster[3]]);
 		nadVC = calcnadCV(segments.segments[cluster[0]],segments.segments[cluster[1]]);;
-		nadProduct = ((Math.abs(nadC1C2 - nadC2C3) + Math.abs(nadC1C2 - nadVC)) / 2).toFixed(2);
+		nadProduct = ((nadC1C2 - nadVC) + (nadC1C2 - nadC2C3)) / 2;
 		if (nadVC <= nadC1C2 && nadC1C2 > nadC2C3) {
 			preference = "Yes";
 		}
 		else {
 			preference = "No";
 		}
-		result = "<td>"+nadVC.toFixed(1)+"</td><td>"+nadC1C2.toFixed(1)+"</td><td>"+nadC2C3.toFixed(1)+"</td><td>-</td><td>"+nadProduct+"</td><td class='nad'>"+preference+"</td>"
+		result = "<td>"+nadVC.toFixed(1)+"</td><td>"+nadC1C2.toFixed(1)+"</td><td>"+nadC2C3.toFixed(1)+"</td><td>-</td><td>"+nadProduct.toFixed(2)+"</td><td class='nad'>"+preference+"</td>"
 		return result;
 	case "VCCCV":
 		nadC1C2 = calcnadCC(segments.segments[cluster[1]],segments.segments[cluster[2]]);
@@ -253,7 +253,7 @@ function calculateNAD(cluster) {
 		else {
 			preference = "No";
 		}
-		result = "<td>"+nadVC.toFixed(1)+"</td><td>"+nadC1C2.toFixed(1)+"</td><td>"+nadC2C3.toFixed(1)+"</td><td>"+nadCV.toFixed(1)+"</td><td>"+nadProduct+"</td><td class='nad'>"+preference+"</td>"
+		result = "<td>"+nadVC.toFixed(1)+"</td><td>"+nadC1C2.toFixed(1)+"</td><td>"+nadC2C3.toFixed(1)+"</td><td>"+nadCV.toFixed(1)+"</td><td>"+nadProduct.toFixed(2)+"</td><td class='nad'>"+preference+"</td>"
 		return result;
 	default:
 		return "-";

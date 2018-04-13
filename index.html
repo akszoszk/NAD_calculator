@@ -55,6 +55,8 @@
  								<option value="eng" selected="true">English</option>
  								<option value="pl">Polish</option>
                                 <option value="de">German</option>
+                                <option value="rus">Russian</option>
+                                <option value="ukr">Ukrainian</option>
  								<option value="custom">User-defined</option>
  							</select>
  						<label class="checkbox"><input type="checkbox" checked="checked" id="include-sonority"> Include sonority when calculating NAD</label>
@@ -93,11 +95,10 @@
 
     <div class="footer">
         <div class="container-fluid">
-            <p>Written by <a href="http://wa.amu.edu.pl/wa/aperlinski_grzegorz"
-            target="_blank">Grzegorz Aperliński</a> (<a href="mailto:gaperlinski@wa.amu.edu.pl">gaperlinski@wa.amu.edu.pl</a>), based on original work by <a href="http://wa.amu.edu.pl/wa/Krynicki_Grzegorz"
+            <p>Written by Grzegorz Aperliński (<a href="mailto:gaperlinski@gmail.com">gaperlinski@gmail.com</a>), based on original work by <a href="http://wa.amu.edu.pl/wa/Krynicki_Grzegorz"
             target="_blank">Grzegorz Krynicki</a>, later supplemented by <a href="http://wa.amu.edu.pl/wa/Pietrala_Dawid"
             target="_blank">Dawid Pietrala</a>.</p>
-            <p>v1.1.2 (updated 11-04-2018)</p>
+            <p>v1.2.0 (updated 13-04-2018)</p>
         </div>
      <script type="text/javascript">
         $.getScript("js/rangy.js");
@@ -105,7 +106,7 @@
         $.getScript("js/export.js");
         $.getScript("js/bootstrap.min.js");
         $.getScript("js/keyboard.js");
-        $.getScript("js/calculator.js");
+        $.getScript("js/calculator.min.js");
         $.getScript("js/storage.js")
         $.getScript("js/detectmobilebrowser.js")
     </script>

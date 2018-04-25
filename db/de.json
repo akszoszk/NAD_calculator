@@ -140,6 +140,20 @@
             "son": 0,
             "isVowel": false
         },
+        "ʝ": {
+            "poa": 3,
+            "moa": 4,
+            "lx": 1,
+            "son": 0,
+            "isVowel": false
+        },
+        "j": {
+            "poa": 3,
+            "moa": 1,
+            "lx": 1,
+            "son": 1,
+            "isVowel": false
+        },
         "V": {
             "poa": 0,
             "moa": 0,

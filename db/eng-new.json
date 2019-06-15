@@ -29,15 +29,15 @@
             "isVowel": false
         },
         "k": {
-            "poa": 3.5,
-            "moa": 5,
+            "poa": 7,
+            "moa": 17,
             "lx": 0,
             "son": 0,
             "isVowel": false
         },
         "ɡ": {
-            "poa": 3.5,
-            "moa": 5,
+            "poa": 7,
+            "moa": 14,
             "lx": 1,
             "son": 0,
             "isVowel": false
@@ -57,8 +57,8 @@
             "isVowel": false
         },
         "ŋ": {
-            "poa": 3.5,
-            "moa": 3,
+            "poa": 7,
+            "moa": 11,
             "lx": 1,
             "son": 1,
             "isVowel": false

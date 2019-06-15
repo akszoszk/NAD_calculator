@@ -1,13 +1,13 @@
 //load default keyboard and nad settings 
 var data = {}
 $(document).ready(function() {
-    $("#keyboard-placeholder").load("db/eng.html");
+    $("#keyboard-placeholder").load("db/eng-new.html");
   	segments = (function () {
     segments = null;
     $.ajax({
         'async': false,
         'global': false,
-        'url': 'db/eng.json',
+        'url': 'db/eng-new.json',
         'dataType': "json",
         'success': function (data) {
             segments = data;

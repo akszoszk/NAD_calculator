@@ -256,7 +256,8 @@ function calculateNAD(cluster) {
 		else {
 			preference = "No";
 		}
-		result = "<td>"+roundedValue(nadVC)+"</td><td>"+roundedValue(nadC1C2)+"</td><td>"+roundedValue(nadC2C3)+"</td><td>"+roundedValue(nadCV)+"</td><td>"+roundedValue(nadProduct)+"</td><td class='nad'>"+preference+"</td>"
+		var product = nadProduct // no rounding because value is not available
+		result = "<td>"+roundedValue(nadVC)+"</td><td>"+roundedValue(nadC1C2)+"</td><td>"+roundedValue(nadC2C3)+"</td><td>"+roundedValue(nadCV)+"</td><td>"+product+"</td><td class='nad'>"+preference+"</td>"
 		return result;
 	default:
 		return "-";

@@ -144,34 +144,31 @@ function identifyCluster(cluster) {
 function calculateNAD(cluster) {
 	cluster = tempSymbols(cluster);
 	var clusterType = identifyCluster(cluster);
+	var includeSonority = $('#include-sonority').is(':checked');
+
 	//formula for calculating NAD between two consonants
 	function calcnadCC(C1,C2) {
-		if ($('#include-sonority').is(':checked')) {
-			if (C1.son !== C2.son) {
-				return Math.abs(C1.moa - C2.moa) + Math.abs(C1.poa - C2.poa) + 1;		
-			}
-			else {
-				return Math.abs(C1.moa - C2.moa) + Math.abs(C1.poa - C2.poa);
-			}
-		}
-		else {
-			return Math.abs(C1.moa - C2.moa) + Math.abs(C1.poa - C2.poa);
-		}	
+		return calcnad(C1,C2);
 	}
 	//formula for calculating NAD between a consonant and vowel
 	function calcnadCV(C,V) {
-		if ($('#include-sonority').is(':checked')) {
-			if (C.son !== V.son) {
-				return Math.abs(C.moa - V.moa) + 1;		
-			}
-			else {
-				return Math.abs(C.moa - V.moa);
-			}
+		return calcnad(C,V);
+	}
+	//generic formula to calculate nad
+	function calcnad(a,b) {
+		var nad;
+		if (a.poa == 0 || b.poa == 0) {
+			nad = Math.abs(a.moa - b.moa);
 		}
 		else {
-			return Math.abs(C.moa - V.moa);
+			nad = Math.abs(a.moa - b.moa) + Math.abs(a.poa - b.poa);
 		}
+		if (includeSonority && a.son !== b.son) {
+			nad += 1;
+		}
+		return nad;
 	}
+
 	function roundedValue(input) {
 		return Math.round((input + 0.00001) * 100) / 100;
 	}

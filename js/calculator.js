@@ -347,15 +347,19 @@ function modifyNAD() {
 					//update poa NAD value of matched token
 					var token = $(this).html();
 					var token = tempSymbols(token);
-					if (idNAD === "bilabialNAD" || idNAD === "velarNAD") {
+					if (idNAD === "bilabialNAD" || idNAD === "velarNAD" || idNAD === "moaNAD15") {
 						segments.segments[token].poa = newNAD;
 						var newLabialVelarNAD = parseFloat($('#bilabialNAD').val(), 10) + parseFloat($('#velarNAD').val(), 10);
+						var newVelarVowelNAD = parseFloat($('#moaNAD15').val(), 10) + parseFloat($('#velarNAD').val(), 10);
 						segments.segments["w"].poa = newLabialVelarNAD/2;
 						if ($('#db').val() === "pl") {
 							segments.segments["W"].poa = newLabialVelarNAD/2;
 						}
 						else if ($('#db').val() === "custom") {
 							segments.segments["ʍ"].poa = newLabialVelarNAD/2;
+						}
+						else if ($('#db').val() === "eng-new") {
+							segments.segments["u"].poa = newVelarVowelNAD/2;
 						}					
 					}
 					else {

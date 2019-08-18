@@ -57,11 +57,14 @@ select#db {
     font-family: "Charis SIL", "Doulos SIL", "Times New Roman";
     font-size: 16px;
     height: 1.5em;
+    width: 1.5em;
     line-height: 1em;
 }
 
 .keyboard button.vowel {
-	font-weight: inherit;
+    width: auto;
+    font-weight: inherit;
+    font-family: inherit;
 	font-size: inherit;
 }
 
@@ -175,6 +178,14 @@ label.checkbox {
     width: 100%;
     height: 30px;
     margin: 0;
+}
+
+.keyboard.revised .variants {
+    white-space: nowrap;
+}
+
+.keyboard.revised .variants button {
+    width: 1.5em;
 }
 
 .keyboard.revised .consonants table th {

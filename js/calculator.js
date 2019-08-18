@@ -49,6 +49,11 @@ function tempSymbols(cluster) {
 		ʦ̪: "C",
 		ʣ̪: "Q",
 		pf: "P",
+		ɛː: "ɛ",
+		uː: "u",
+		ɔː: "ɔ",
+		ɑː: "ɑ",
+		iː: "i"
 	};
 	for (var key in mapObj) {
 		var re = new RegExp(key, "gi");

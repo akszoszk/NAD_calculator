@@ -189,6 +189,20 @@
             "son": 1,
             "isVowel": true
         },
+        "ɛ": {
+            "poa": 6,
+            "moa": 4,
+            "lx": 1,
+            "son": 1,
+            "isVowel": true
+        },
+        "ʌ": {
+            "poa": 6,
+            "moa": 4,
+            "lx": 1,
+            "son": 1,
+            "isVowel": true
+        },
         "i": {
             "poa": 6,
             "moa": 3,
@@ -210,9 +224,9 @@
             "son": 1,
             "isVowel": true
         },
-        "ʌ": {
-            "poa": 7,
-            "moa": 4,
+        "a": {
+            "poa": 6,
+            "moa": 1,
             "lx": 1,
             "son": 1,
             "isVowel": true
@@ -224,7 +238,21 @@
             "son": 1,
             "isVowel": true
         },
-        "o": {
+        "ʊ": {
+            "poa": 4,
+            "moa": 3,
+            "lx": 1,
+            "son": 1,
+            "isVowel": true
+        },
+        "ɔ": {
+            "poa": 7,
+            "moa": 2,
+            "lx": 1,
+            "son": 1,
+            "isVowel": true
+        },
+        "ɒ": {
             "poa": 7,
             "moa": 2,
             "lx": 1,

@@ -41,7 +41,7 @@ $('#db').change(function() {
 function tempSymbols(cluster) {
 	var mapObj = {
   	t͡ʂ:"T",
- 	d͡ʐ:"D",
+ 		d͡ʐ:"D",
    	j̃:"J",
    	w̃:"W",
    	t̪:"T",
@@ -50,9 +50,10 @@ function tempSymbols(cluster) {
    	ʣ̪: "Q",
    	pf : "P",
 	};
-	cluster = cluster.replace(/t͡ʂ|d͡ʐ|j̃|w̃|t̪|d̪|ʦ̪|ʣ̪|pf/gi, function(matched){
-  	return mapObj[matched];
-	});
+	for (var key in mapObj) {
+		var re = new RegExp(key,"gi");
+		cluster = cluster.replace(re, mapObj[key]);
+	}
 	return cluster;
 }
 

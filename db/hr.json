@@ -1,190 +1,191 @@
 {
     "segments": {
         "p": {
-            "poa": 1,
             "moa": 5,
+            "poa": 1,
             "lx": 0,
             "son": 0,
             "isVowel": false
         },
         "b": {
+            "moa": 5,
             "poa": 1,
-            "moa": 5,
-            "lx": 1,
-            "son": 0,
-            "isVowel": false
-        },
-        "t": {
-            "poa": 2.3,
-            "moa": 5,
-            "lx": 0,
-            "son": 0,
-            "isVowel": false
-        },
-        "d": {
-            "poa": 2.3,
-            "moa": 5,
-            "lx": 1,
-            "son": 0,
-            "isVowel": false
-        },
-        "k": {
-            "poa": 3.5,
-            "moa": 5,
-            "lx": 0,
-            "son": 0,
-            "isVowel": false
-        },
-        "ɡ": {
-            "poa": 3.5,
-            "moa": 5,
             "lx": 1,
             "son": 0,
             "isVowel": false
         },
         "m": {
+            "moa": 3,
             "poa": 1,
-            "moa": 3,
             "lx": 1,
             "son": 1,
             "isVowel": false
-        },
-        "n": {
-            "poa": 2.3,
-            "moa": 3,
-            "lx": 1,
-            "son": 1,
-            "isVowel": false
-        },
+        }
+        ,
         "f": {
-            "poa": 1.5,
             "moa": 4,
+            "poa": 1.5,
+            "lx": 0,
+            "son": 0,
+            "isVowel": false
+        },
+        "ʋ": {
+            "moa": 1,
+            "poa": 1.5,
+            "lx": 1,
+            "son": 1,
+            "isVowel": false
+        },
+        "ʦ": {
+            "moa": 4.5,
+            "poa": 2,
             "lx": 0,
             "son": 0,
             "isVowel": false
         },
         "s": {
-            "poa": 2,
             "moa": 4,
+            "poa": 2,
             "lx": 0,
             "son": 0,
             "isVowel": false
         },
         "z": {
+            "moa": 4,
             "poa": 2,
-            "moa": 4,
             "lx": 1,
             "son": 0,
             "isVowel": false
         },
-        "ʃ": {
-            "poa": 2.6,
-            "moa": 4,
-            "lx": 0,
-            "son": 0,
-            "isVowel": false
-        },
-        "ʒ": {
-            "poa": 2.6,
-            "moa": 4,
-            "lx": 1,
-            "son": 0,
-            "isVowel": false
-        },
-        "ʧ": {
-            "poa": 2.6,
-            "moa": 4.5,
-            "lx": 0,
-            "son": 0,
-            "isVowel": false
-        },
-        "ʤ": {
-            "poa": 2.6,
-            "moa": 4.5,
-            "lx": 1,
-            "son": 0,
-            "isVowel": false
-        },
-        "h": {
-            "poa": 3.5,
-            "moa": 4,
-            "lx": 0,
-            "son": 0,
-            "isVowel": false
-        },
-        "ʦ": {
-            "poa": 2,
-            "moa": 4.5,
-            "lx": 0,
-            "son": 0,
-            "isVowel": false
-        },
-        "r": {
+        "t": {
+            "moa": 5,
             "poa": 2.3,
-            "moa": 2,
-            "lx": 1,
-            "son": 1,
-            "isVowel": false
-        },
-        "ʨ": {
-            "poa": 3,
-            "moa": 4.5,
             "lx": 0,
             "son": 0,
             "isVowel": false
         },
-        "ʥ": {
-            "poa": 3,
-            "moa": 4.5,
+        "d": {
+            "moa": 5,
+            "poa": 2.3,
             "lx": 1,
             "son": 0,
             "isVowel": false
         },
-        "ɲ": {
-            "poa": 3,
+        "n": {
             "moa": 3,
-            "lx": 1,
-            "son": 1,
-            "isVowel": false
-        },
-        "ʎ": {
-            "poa": 3,
-            "moa": 2.5,
-            "lx": 1,
-            "son": 1,
-            "isVowel": false
-        },
-        "j": {
-            "poa": 3,
-            "moa": 1,
-            "lx": 1,
-            "son": 1,
-            "isVowel": false
-        },
-        "ʋ": {
-            "poa": 1.5,
-            "moa": 1,
+            "poa": 2.3,
             "lx": 1,
             "son": 1,
             "isVowel": false
         },
         "l": {
-            "poa": 2.3,
             "moa": 2.5,
+            "poa": 2.3,
+            "lx": 1,
+            "son": 1,
+            "isVowel": false
+        },
+        "r": {
+            "moa": 2,
+            "poa": 2.3,
             "lx": 1,
             "son": 1,
             "isVowel": false
         },
         "ṛ": {
-            "poa": 2.3,
             "moa": 0.5,
+            "poa": 2.3,
             "lx": 1,
             "son": 1,
             "isVowel": false
         },
+        "ʧ": {
+            "moa": 4.5,
+            "poa": 2.6,
+            "lx": 0,
+            "son": 0,
+            "isVowel": false
+        },
+        "ʤ": {
+            "moa": 4.5,
+            "poa": 2.6,
+            "lx": 1,
+            "son": 0,
+            "isVowel": false
+        },
+        "ʃ": {
+            "moa": 4,
+            "poa": 2.6,
+            "lx": 0,
+            "son": 0,
+            "isVowel": false
+        },
+        "ʒ": {
+            "moa": 4,
+            "poa": 2.6,
+            "lx": 1,
+            "son": 0,
+            "isVowel": false
+        },
+        "ʨ": {
+            "moa": 4.5,
+            "poa": 3,
+            "lx": 0,
+            "son": 0,
+            "isVowel": false
+        },
+        "ʥ": {
+            "moa": 4.5,
+            "poa": 3,
+            "lx": 1,
+            "son": 0,
+            "isVowel": false
+        },
+        "ɲ": {
+            "moa": 3,
+            "poa": 3,
+            "lx": 1,
+            "son": 1,
+            "isVowel": false
+        },
+        "ʎ": {
+            "moa": 2.5,
+            "poa": 3,
+            "lx": 1,
+            "son": 1,
+            "isVowel": false
+        },
+        "j": {
+            "moa": 1,
+            "poa": 3,
+            "lx": 1,
+            "son": 1,
+            "isVowel": false
+        },
+        "k": {
+            "moa": 5,
+            "poa": 3.5,
+            "lx": 0,
+            "son": 0,
+            "isVowel": false
+        },
+        "ɡ": {
+            "moa": 5,
+            "poa": 3.5,
+            "lx": 1,
+            "son": 0,
+            "isVowel": false
+        },
+        "h": {
+            "moa": 4,
+            "poa": 3.5,
+            "lx": 0,
+            "son": 0,
+            "isVowel": false
+        },
         "V": {
-            "poa": 0,
             "moa": 0,
+            "poa": 0,
             "lx": 1,
             "son": 1,
             "isVowel": true

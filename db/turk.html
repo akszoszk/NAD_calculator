@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .empty {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+<div class="keyboard">
+    <div class="consonants">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="3">OBSTRUENT</th>
+                    <th colspan="4">SONORANT</th>
+                    <th colspan="3" rowspan="2"><button type="button" class="vowel" value="Vowel">VOWEL</button></th>
+                </tr>
+                <tr>
+                    <th>STOP</th>
+                    <th>AFFRICATE</th>
+                    <th>FRICATIVE</th>
+                    <th>NASAL</th>
+                    <th>LIQUID lateral</th>
+                    <th>LIQUID rhotic</th>
+                    <th>GLIDE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="moa" type="number" min="0" max="5" step="0.1" value="5.0"/></td>
+                    <td><input class="moa" type="number" min="0" max="5" step="0.1" value="4.5"/></td>
+                    <td><input class="moa" type="number" min="0" max="5" step="0.1" value="4.0"/></td>
+                    <td><input class="moa" type="number" min="0" max="5" step="0.1" value="3.0"/></td>
+                    <td><input class="moa" type="number" min="0" max="5" step="0.1" value="2.5"/></td>
+                    <td><input class="moa" type="number" min="0" max="5" step="0.1" value="2.0"/></td>
+                    <td><input class="moa" type="number" min="0" max="5" step="0.1" value="1.0"/></td>
+                    <td class="align-left" colspan="3"><input disabled="disabled" type="number" min="0" max="5" step="0.1" value="0"/></td>
+                </tr>
+            <tbody>
+                <!-- Bilabial Row -->
+                <tr>
+                    <td>
+                        <button type="button" value="p">p</button>
+                        <button type="button" value="b">b</button>
+                    </td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td>
+                        <button type="button" value="m">m</button>
+                    </td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><input class="poa" type="number" min="0" max="5" step="0.1" value="1"/></td>
+                    <th>bilabial</th>
+                    <th colspan="1" rowspan="2">LABIAL</th>
+                </tr>
+                <!-- Labiodental Row -->
+                <tr>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td>
+                        <button type="button" value="f">f</button>
+                        <button type="button" value="v">v</button>
+                    </td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><input class="poa" type="number" min="0" max="5" step="0.1" value="1.5"/></td>
+                    <th>labiodental</th>
+                </tr>
+                <!-- Alveolar Row -->
+                <tr>
+                    <td>
+                        <button type="button" value="t">t</button>
+                        <button type="button" value="d">d</button>
+                    </td>
+                    <td class="empty">&nbsp;</td>
+                    <td>
+                        <button type="button" value="s">s</button>
+                        <button type="button" value="z">z</button>
+                    </td>
+                    <td>
+                        <button type="button" value="n">n</button>
+                    </td>
+                    <td>
+                        <button type="button" value="ɫ">ɫ</button>
+                    </td>
+                    <td>
+                        <button type="button" value="ɾ">ɾ</button>
+                    </td>
+                    <td class="empty">&nbsp;</td>
+                    <td><input class="poa" type="number" min="0" max="5" step="0.1" value="2"/></td>
+                    <th>alveolar</th>
+                </tr>
+                <!-- Postalveolar Row (Affricates placed here) -->
+                <tr>
+                    <td class="empty">&nbsp;</td>
+                    <td>
+                        <button type="button" value="ʧ">ʧ</button>
+                        <button type="button" value="ʤ">ʤ</button>
+                    </td>
+                    <td>
+                        <button type="button" value="ʃ">ʃ</button>
+                        <button type="button" value="ʒ">ʒ</button>
+                    </td>
+                    <td class="empty">&nbsp;</td>
+                    <td>
+                        <button type="button" value="l">l</button>
+                    </td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><input class="poa" type="number" min="0" max="5" step="0.1" value="2.5"/></td>
+                    <th>postalveolar</th>
+					<th colspan="1" rowspan="1">CORONAL</th>
+                </tr>
+                <!-- Palatal Row -->
+                <tr>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td>
+                        <button type="button" value="j">j</button>
+                    </td>
+                    <td><input class="poa" type="number" min="0" max="5" step="0.1" value="3"/></td>
+                    <th>palatal</th>
+                    <th colspan="1" rowspan="2">DORSAL</th>
+                </tr>
+                <!-- Velar Row -->
+                <tr>
+                    <td>
+                        <button type="button" value="k">k</button>
+                        <button type="button" value="ɡ">ɡ</button>
+                    </td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><input class="poa" type="number" min="0" max="5" step="0.1" value="3.5"/></td>
+                    <th>velar</th>
+                </tr>
+                <!-- Alveolar lateral Row (ɫ) -->
+                <tr>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+					<td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><input class="poa" type="number" min="0" max="5" step="0.1" value="4"/></td>
+					<th class="empty">&nbsp;</th>
+                    <th>RADICAL</th>
+                </tr>
+                <!-- Glottal Row -->
+                <tr>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td>
+                        <button type="button" value="h">h</button>
+                    </td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td class="empty">&nbsp;</td>
+                    <td><input class="poa" type="number" min="0" max="5" step="0.1" value="5.0"/></td>
+                    <th class="empty">&nbsp;</th>
+                    <th>GLOTTAL</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
